@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGHMS - Load Balancing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-icon">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" alt="Gov Logo" width="36">
+                </div>
+                <div class="logo-text">
+                    <h2>SGHMS</h2>
+                    <p>Smart Government Healthcare<br>Management System</p>
+                </div>
+            </div>
+            
+                                    <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item">
+                    <i class="fas fa-home"></i> Dashboard
+                </a>
+                <a href="grievances.html" class="nav-item">
+                    <i class="fas fa-exclamation-circle"></i> Grievance Desk
+                </a>
+                <a href="load-balancing.html" class="nav-item active">
+                    <i class="fas fa-hospital"></i> Load Balancing
+                </a>
+                <a href="outbreaks.html" class="nav-item">
+                    <i class="fas fa-biohazard"></i> Outbreak Alerts
+                </a>
+                <div class="nav-divider"></div>
+                <a href="hospitals.html" class="nav-item"><i class="fas fa-building"></i> Hospitals</a>
+                <a href="attendance.html" class="nav-item"><i class="fas fa-user-md"></i> Attendance & Roster</a>
+                <a href="emergency.html" class="nav-item"><i class="fas fa-ambulance"></i> Emergency</a>
+                <a href="queue.html" class="nav-item"><i class="fas fa-users"></i> Queue Management</a>
+                <a href="reports.html" class="nav-item"><i class="fas fa-chart-bar"></i> Reports & Analytics</a>
+                <a href="settings.html" class="nav-item"><i class="fas fa-cog"></i> Settings</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="system-status">
+                    <i class="fas fa-shield-check"></i> System Secure
+                    <div class="last-updated">Last updated: Just now</div>
+                </div>
+                <div class="version">v2.4.1</div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Topbar -->
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="menu-btn"><i class="fas fa-bars"></i></button>
+                    <div class="gov-title">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" alt="Gov Logo" height="28">
+                        <span>Government of India</span>
+                    </div>
+                </div>
+                <div class="topbar-right">
+                    <div class="notifications">
+                        <i class="far fa-bell"></i>
+                        <span class="badge">12</span>
+                    </div>
+                    <div class="user-profile">
+                        <img src="https://i.pravatar.cc/150?img=11" alt="Dr. Rajesh Kumar" class="avatar">
+                        <div class="user-info">
+                            <span class="user-name">Dr. Rajesh Kumar</span>
+                            <span class="user-role">Administrator</span>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <div class="page-header">
+                    <div>
+                        <h1>Hospital Load Balancing</h1>
+                        <p class="subtitle">Visual heatmaps showing OPD congestion and redirect recommendations</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn-primary">
+                            <i class="fas fa-sync-alt"></i> Refresh Data
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>Regional OPD Congestion Heatmap (Delhi NCR)</h3>
+                            <div class="legend" style="display:flex; gap:15px; font-size:12px; align-items:center;">
+                                <span><span style="display:inline-block; width:12px; height:12px; background:#ef4444; border-radius:2px;"></span> Critical Load (>90%)</span>
+                                <span><span style="display:inline-block; width:12px; height:12px; background:#f59e0b; border-radius:2px;"></span> High Load (75-90%)</span>
+                                <span><span style="display:inline-block; width:12px; height:12px; background:#10b981; border-radius:2px;"></span> Normal (<75%)</span>
+                            </div>
+                        </div>
+                        <div class="card-body" style="padding: 16px;">
+                            <div class="map-container" style="height: 500px; background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Delhi_map.svg/800px-Delhi_map.svg.png') no-repeat center center; background-size: cover; position: relative;">
+                                <!-- Heatmap Dots (Mock) -->
+                                <div style="position:absolute; top:45%; left:48%; width:80px; height:80px; background:rgba(239, 68, 68, 0.6); border-radius:50%; filter:blur(10px);"></div>
+                                <div style="position:absolute; top:45%; left:48%; width:15px; height:15px; background:#b91c1c; border-radius:50%; border:2px solid white; box-shadow: 0 0 10px rgba(0,0,0,0.5);"></div>
+                                <div style="position:absolute; top:40%; left:52%; font-weight:bold; text-shadow: 1px 1px 2px white; font-size: 14px;">LNJP (OPD 120%)</div>
+                                
+                                <div style="position:absolute; top:60%; left:45%; width:60px; height:60px; background:rgba(245, 158, 11, 0.6); border-radius:50%; filter:blur(10px);"></div>
+                                <div style="position:absolute; top:60%; left:45%; width:15px; height:15px; background:#d97706; border-radius:50%; border:2px solid white; box-shadow: 0 0 10px rgba(0,0,0,0.5);"></div>
+                                <div style="position:absolute; top:55%; left:45%; font-weight:bold; text-shadow: 1px 1px 2px white; font-size: 14px;">Safdarjung (OPD 85%)</div>
+                                
+                                <div style="position:absolute; top:35%; left:65%; width:50px; height:50px; background:rgba(16, 185, 129, 0.6); border-radius:50%; filter:blur(10px);"></div>
+                                <div style="position:absolute; top:35%; left:65%; width:15px; height:15px; background:#047857; border-radius:50%; border:2px solid white; box-shadow: 0 0 10px rgba(0,0,0,0.5);"></div>
+                                <div style="position:absolute; top:30%; left:65%; font-weight:bold; text-shadow: 1px 1px 2px white; font-size: 14px;">GTB Hospital (OPD 60%)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>Load Distribution Recommendations</h3>
+                        </div>
+                        <div class="card-body">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Overloaded Center</th>
+                                        <th>Current Load</th>
+                                        <th>Suggested Alternative 1</th>
+                                        <th>Suggested Alternative 2</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>LNJP Hospital (Medicine OPD)</strong></td>
+                                        <td><span class="status-badge danger">120% (Est Wait: 4hrs)</span></td>
+                                        <td>GB Pant Hospital (0.5 km away) - 45% Load</td>
+                                        <td>Sushrut Trauma (2.1 km away) - 52% Load</td>
+                                        <td><button class="btn-primary" style="padding: 6px 12px; font-size: 12px;">Route Traffic</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>AIIMS Delhi (Emergency)</strong></td>
+                                        <td><span class="status-badge danger">105% (No ICU Beds)</span></td>
+                                        <td>Safdarjung Hospital (Across Road) - 88% Load</td>
+                                        <td>RML Hospital (6 km away) - 70% Load</td>
+                                        <td><button class="btn-primary" style="padding: 6px 12px; font-size: 12px;">Issue Advisory</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
+

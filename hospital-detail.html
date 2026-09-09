@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIIMS Delhi - Hospital Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-icon">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" alt="Gov Logo" width="36">
+                </div>
+                <div class="logo-text">
+                    <h2>SGHMS</h2>
+                    <p>Smart Government Healthcare<br>Management System</p>
+                </div>
+            </div>
+            
+                                    <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item">
+                    <i class="fas fa-home"></i> Dashboard
+                </a>
+                <a href="grievances.html" class="nav-item">
+                    <i class="fas fa-exclamation-circle"></i> Grievance Desk
+                </a>
+                <a href="load-balancing.html" class="nav-item">
+                    <i class="fas fa-hospital"></i> Load Balancing
+                </a>
+                <a href="outbreaks.html" class="nav-item">
+                    <i class="fas fa-biohazard"></i> Outbreak Alerts
+                </a>
+                <div class="nav-divider"></div>
+                <a href="hospitals.html" class="nav-item active"><i class="fas fa-building"></i> Hospitals</a>
+                <a href="attendance.html" class="nav-item"><i class="fas fa-user-md"></i> Attendance & Roster</a>
+                <a href="emergency.html" class="nav-item"><i class="fas fa-ambulance"></i> Emergency</a>
+                <a href="queue.html" class="nav-item"><i class="fas fa-users"></i> Queue Management</a>
+                <a href="reports.html" class="nav-item"><i class="fas fa-chart-bar"></i> Reports & Analytics</a>
+                <a href="settings.html" class="nav-item"><i class="fas fa-cog"></i> Settings</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="system-status">
+                    <i class="fas fa-shield-check"></i> System Secure
+                    <div class="last-updated">Last updated: Just now</div>
+                </div>
+                <div class="version">v2.4.1</div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Topbar -->
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="menu-btn"><i class="fas fa-bars"></i></button>
+                    <div class="gov-title">
+                        <a href="hospitals.html" style="text-decoration: none; color: var(--text-muted); font-size: 14px; margin-right: 12px;"><i class="fas fa-arrow-left"></i> Back to Directory</a>
+                    </div>
+                </div>
+                <div class="topbar-right">
+                    <div class="notifications">
+                        <i class="far fa-bell"></i>
+                        <span class="badge">12</span>
+                    </div>
+                    <div class="user-profile">
+                        <img src="https://i.pravatar.cc/150?img=11" alt="Dr. Rajesh Kumar" class="avatar">
+                        <div class="user-info">
+                            <span class="user-name">Dr. Rajesh Kumar</span>
+                            <span class="user-role">Administrator</span>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                
+                <div class="hospital-header">
+                    <div class="hospital-title">
+                        <i class="fas fa-building text-blue" style="font-size: 24px; color: var(--color-blue);"></i>
+                        <h1>AIIMS Delhi</h1>
+                        <span class="status-badge success" style="margin-left: 12px;">Active</span>
+                    </div>
+                    <p style="color: var(--text-muted); font-size: 14px; margin-left: 40px;">Ansari Nagar, New Delhi - 110029 | Super Speciality Central Government Hospital</p>
+                    
+                    <div class="tabs" style="margin-top: 24px; margin-bottom: 0; padding-left: 40px;">
+                        <a href="#" class="tab-item active"><i class="fas fa-chart-pie"></i> Overview</a>
+                        <a href="#" class="tab-item"><i class="fas fa-user-md"></i> Doctor Attendance</a>
+                        <a href="#" class="tab-item"><i class="fas fa-exclamation-circle"></i> Grievances</a>
+                        <a href="#" class="tab-item"><i class="fas fa-users"></i> OPD Queue</a>
+                    </div>
+                </div>
+
+                <!-- Stats Cards for Hospital -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon available"><i class="fas fa-bed"></i></div>
+                        <div class="stat-details">
+                            <h2>122 / 450</h2>
+                            <p>Available Beds</p>
+                            <span class="trend up"><i class="fas fa-arrow-up"></i> 72% Occupancy</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon doctors"><i class="fas fa-user-md"></i></div>
+                        <div class="stat-details">
+                            <h2>310</h2>
+                            <p>Doctors Present</p>
+                            <span class="trend up"><i class="fas fa-check"></i> 92% Roster</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon emergency"><i class="fas fa-ambulance"></i></div>
+                        <div class="stat-details">
+                            <h2>5</h2>
+                            <p>Active Trauma Cases</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>Department Level Load (AIIMS)</h3>
+                        </div>
+                        <div class="card-body">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Department</th>
+                                        <th>OPD Queue</th>
+                                        <th>Est. Wait Time</th>
+                                        <th>Doctor Availability</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Cardiology</td>
+                                        <td>85</td>
+                                        <td><span class="status-badge warning">1 hr 15 mins</span></td>
+                                        <td>4 / 4 Present</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Neurology</td>
+                                        <td>42</td>
+                                        <td><span class="status-badge success">30 mins</span></td>
+                                        <td>2 / 3 Present (1 leave)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Emergency Medicine</td>
+                                        <td>Critical Load</td>
+                                        <td><span class="status-badge danger">Immediate triage</span></td>
+                                        <td>12 / 12 Present</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

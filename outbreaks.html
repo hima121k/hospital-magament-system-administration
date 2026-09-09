@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGHMS - Outbreak Alerts</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-icon">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" alt="Gov Logo" width="36">
+                </div>
+                <div class="logo-text">
+                    <h2>SGHMS</h2>
+                    <p>Smart Government Healthcare<br>Management System</p>
+                </div>
+            </div>
+            
+                                    <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item">
+                    <i class="fas fa-home"></i> Dashboard
+                </a>
+                <a href="grievances.html" class="nav-item">
+                    <i class="fas fa-exclamation-circle"></i> Grievance Desk
+                </a>
+                <a href="load-balancing.html" class="nav-item">
+                    <i class="fas fa-hospital"></i> Load Balancing
+                </a>
+                <a href="outbreaks.html" class="nav-item active">
+                    <i class="fas fa-biohazard"></i> Outbreak Alerts
+                </a>
+                <div class="nav-divider"></div>
+                <a href="hospitals.html" class="nav-item"><i class="fas fa-building"></i> Hospitals</a>
+                <a href="attendance.html" class="nav-item"><i class="fas fa-user-md"></i> Attendance & Roster</a>
+                <a href="emergency.html" class="nav-item"><i class="fas fa-ambulance"></i> Emergency</a>
+                <a href="queue.html" class="nav-item"><i class="fas fa-users"></i> Queue Management</a>
+                <a href="reports.html" class="nav-item"><i class="fas fa-chart-bar"></i> Reports & Analytics</a>
+                <a href="settings.html" class="nav-item"><i class="fas fa-cog"></i> Settings</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="system-status">
+                    <i class="fas fa-shield-check"></i> System Secure
+                    <div class="last-updated">Last updated: Just now</div>
+                </div>
+                <div class="version">v2.4.1</div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Topbar -->
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="menu-btn"><i class="fas fa-bars"></i></button>
+                    <div class="gov-title">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" alt="Gov Logo" height="28">
+                        <span>Government of India</span>
+                    </div>
+                </div>
+                <div class="topbar-right">
+                    <div class="notifications">
+                        <i class="far fa-bell"></i>
+                        <span class="badge">12</span>
+                    </div>
+                    <div class="user-profile">
+                        <img src="https://i.pravatar.cc/150?img=11" alt="Dr. Rajesh Kumar" class="avatar">
+                        <div class="user-info">
+                            <span class="user-name">Dr. Rajesh Kumar</span>
+                            <span class="user-role">Administrator</span>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <div class="page-header">
+                    <div>
+                        <h1>Disease Outbreak Alerts</h1>
+                        <p class="subtitle">Automated early warning system based on triage log symptom analysis</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn-primary" style="background-color: var(--color-red);">
+                            <i class="fas fa-bullhorn"></i> Declare Health Emergency
+                        </button>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card" style="border-left: 4px solid var(--color-red);">
+                        <div class="stat-icon emergency"><i class="fas fa-virus"></i></div>
+                        <div class="stat-details">
+                            <h2>2</h2>
+                            <p>Active Outbreak Alerts</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon queue"><i class="fas fa-head-side-cough"></i></div>
+                        <div class="stat-details">
+                            <h2>345</h2>
+                            <p>Anomalous Symptom Logs</p>
+                            <span class="trend up"><i class="fas fa-arrow-up"></i> +45 past 24h</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid" style="grid-template-columns: 1fr;">
+                    <div class="card">
+                        <div class="card-header" style="background-color: #fee2e2; border-bottom: 1px solid #fca5a5;">
+                            <h3 style="color: #b91c1c;"><i class="fas fa-exclamation-triangle"></i> Critical Alert: Potential Dengue Cluster Detected</h3>
+                            <span class="status-badge danger">Algorithm Confidence: 94%</span>
+                        </div>
+                        <div class="card-body">
+                            <div style="display: flex; padding: 24px; gap: 32px;">
+                                <div style="flex: 1;">
+                                    <h4 style="margin-bottom: 16px; font-size: 16px;">Detection Details</h4>
+                                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px;">
+                                        <li><strong>Primary Symptom Cluster:</strong> High Fever, Joint Pain, Rash</li>
+                                        <li><strong>Reported Cases:</strong> 42 logs matching criteria in last 48 hours.</li>
+                                        <li><strong>Epicenter Pincode:</strong> 110092 (Laxmi Nagar, Delhi)</li>
+                                        <li><strong>Hospitals Receiving Cases:</strong> Max Super Speciality (Patparganj), Walia Nursing Home</li>
+                                    </ul>
+                                    <div style="margin-top: 24px; display: flex; gap: 16px;">
+                                        <button class="btn-primary">Deploy Rapid Response Team</button>
+                                        <button class="btn-primary" style="background: white; color: var(--text-main); border: 1px solid var(--border-color);">Notify Local CMO</button>
+                                    </div>
+                                </div>
+                                <div style="flex: 1; background: #f8fafc; border-radius: 8px; padding: 16px; border: 1px solid var(--border-color);">
+                                    <h4 style="margin-bottom: 12px; font-size: 14px;">Case Trajectory (Last 7 Days)</h4>
+                                    <!-- Mock Chart Area -->
+                                    <div style="height: 150px; display: flex; align-items: flex-end; gap: 8px; border-left: 2px solid #cbd5e1; border-bottom: 2px solid #cbd5e1; padding-left: 8px;">
+                                        <div style="width: 14%; background: #94a3b8; height: 10%; border-radius: 2px 2px 0 0;" title="Day 1: 2 cases"></div>
+                                        <div style="width: 14%; background: #94a3b8; height: 15%; border-radius: 2px 2px 0 0;" title="Day 2: 3 cases"></div>
+                                        <div style="width: 14%; background: #f59e0b; height: 30%; border-radius: 2px 2px 0 0;" title="Day 3: 8 cases"></div>
+                                        <div style="width: 14%; background: #f59e0b; height: 45%; border-radius: 2px 2px 0 0;" title="Day 4: 12 cases"></div>
+                                        <div style="width: 14%; background: #ef4444; height: 60%; border-radius: 2px 2px 0 0;" title="Day 5: 18 cases"></div>
+                                        <div style="width: 14%; background: #ef4444; height: 85%; border-radius: 2px 2px 0 0;" title="Day 6: 28 cases"></div>
+                                        <div style="width: 14%; background: #b91c1c; height: 100%; border-radius: 2px 2px 0 0;" title="Day 7: 42 cases"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" style="margin-top: 16px;">
+                        <div class="card-header" style="background-color: #fef3c7; border-bottom: 1px solid #fde68a;">
+                            <h3 style="color: #b45309;"><i class="fas fa-exclamation-circle"></i> Warning: Spikes in Acute Respiratory Infections (ARI)</h3>
+                            <span class="status-badge warning">Algorithm Confidence: 82%</span>
+                        </div>
+                        <div class="card-body">
+                            <div style="padding: 24px;">
+                                <p style="margin-bottom: 16px;"><strong>Location:</strong> Multiple pincodes in South Delhi (110016, 110017)</p>
+                                <p style="margin-bottom: 16px;"><strong>Details:</strong> 150+ patients reporting dry cough and breathlessness. Correlates with recent AQI drop to 'Severe' category.</p>
+                                <button class="btn-primary" style="background: white; color: var(--text-main); border: 1px solid var(--border-color); font-size: 13px;">View Full Report</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
+

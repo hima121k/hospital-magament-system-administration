@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGHMS - Reports & Analytics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-icon">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" alt="Gov Logo" width="36">
+                </div>
+                <div class="logo-text">
+                    <h2>SGHMS</h2>
+                    <p>Smart Government Healthcare<br>Management System</p>
+                </div>
+            </div>
+            
+                                    <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item">
+                    <i class="fas fa-home"></i> Dashboard
+                </a>
+                <a href="grievances.html" class="nav-item">
+                    <i class="fas fa-exclamation-circle"></i> Grievance Desk
+                </a>
+                <a href="load-balancing.html" class="nav-item">
+                    <i class="fas fa-hospital"></i> Load Balancing
+                </a>
+                <a href="outbreaks.html" class="nav-item">
+                    <i class="fas fa-biohazard"></i> Outbreak Alerts
+                </a>
+                <div class="nav-divider"></div>
+                <a href="hospitals.html" class="nav-item"><i class="fas fa-building"></i> Hospitals</a>
+                <a href="attendance.html" class="nav-item"><i class="fas fa-user-md"></i> Attendance & Roster</a>
+                <a href="emergency.html" class="nav-item"><i class="fas fa-ambulance"></i> Emergency</a>
+                <a href="queue.html" class="nav-item"><i class="fas fa-users"></i> Queue Management</a>
+                <a href="reports.html" class="nav-item active"><i class="fas fa-chart-bar"></i> Reports & Analytics</a>
+                <a href="settings.html" class="nav-item"><i class="fas fa-cog"></i> Settings</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="system-status">
+                    <i class="fas fa-shield-check"></i> System Secure
+                    <div class="last-updated">Last updated: Just now</div>
+                </div>
+                <div class="version">v2.4.1</div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Topbar -->
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="menu-btn"><i class="fas fa-bars"></i></button>
+                    <div class="gov-title">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" alt="Gov Logo" height="28">
+                        <span>Government of India</span>
+                    </div>
+                </div>
+                <div class="topbar-right">
+                    <div class="notifications">
+                        <i class="far fa-bell"></i>
+                        <span class="badge">12</span>
+                    </div>
+                    <div class="user-profile">
+                        <img src="https://i.pravatar.cc/150?img=11" alt="Dr. Rajesh Kumar" class="avatar">
+                        <div class="user-info">
+                            <span class="user-name">Dr. Rajesh Kumar</span>
+                            <span class="user-role">Administrator</span>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <div class="page-header">
+                    <div>
+                        <h1>Reports & Analytics</h1>
+                        <p class="subtitle">Download performance data and view health metrics</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn-primary">
+                            <i class="fas fa-download"></i> Download Monthly Report
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid" style="grid-template-columns: 1fr;">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Available Reports</h3>
+                        </div>
+                        <div class="card-body" style="padding: 24px;">
+                            <ul style="list-style: none; display: flex; flex-direction: column; gap: 16px;">
+                                <li style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 16px; border-bottom: 1px solid var(--border-color);">
+                                    <div>
+                                        <strong>Hospital Performance Metrics (August 2026)</strong>
+                                        <p style="font-size: 13px; color: var(--text-muted);">PDF - 2.4 MB</p>
+                                    </div>
+                                    <button class="btn-primary" style="background: white; color: var(--color-blue); border: 1px solid var(--color-blue); padding: 8px 16px;">Download</button>
+                                </li>
+                                <li style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div>
+                                        <strong>Disease Outbreak Trends (Q3 2026)</strong>
+                                        <p style="font-size: 13px; color: var(--text-muted);">CSV - 1.1 MB</p>
+                                    </div>
+                                    <button class="btn-primary" style="background: white; color: var(--color-blue); border: 1px solid var(--color-blue); padding: 8px 16px;">Download</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
+
